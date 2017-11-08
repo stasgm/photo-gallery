@@ -1,8 +1,75 @@
 .App{
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 30px;
 }
 .App-title{
     font-size: 35px;
+}
+
+.Tags-input{
+    margin: 5px;
+}
+
+.button{
+    margin: 20px;
+    width: 220px;
+}
+
+.status{
+    font-family: monospace;
+    font-size: 16px;
+    height: 35px;
+}
+/*Profile*/
+
+.profile {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.profile-info {
+    margin-left: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #fff;
+    border-radius: 75px;
+    object-fit:cover;
+}
+
+.profile-name {
+    font-size:26px;
+}
+
+.profile-followers, .profile-image-count {
+    font-size: 18px;
+}
+
+/*Gallery*/
+
+.item{
+    display: inline-block;
+    width: 220px;
+    height: 220px;
+    margin: 10px;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+}
+
+.item-img {
+    width: 220px;
+    height: 220px;
+    border: 3px solid #fff;
+    border-radius: 3px;
+    object-fit: cover;
+    position: absolute;
 }

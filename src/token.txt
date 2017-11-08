@@ -1,1 +1,14 @@
+https://www.instagram.com/oauth/authorize/?client_id=60ee6b575f6c4f4ab2f532d27c58d769&redirect_uri=http://damnedgod.dyndns.info/&response_type=token&scope=public_content
+
 https://api.instagram.com/v1/users/self/?access_token=220968095.60ee6b5.fa4881ace5a049799d3b1342699302d9
+
+https://api.instagram.com/v1/users/220968095/?access_token=220968095.60ee6b5.fa4881ace5a049799d3b1342699302d9
+
+
+220968095.60ee6b5.fa4881ace5a049799d3b1342699302d9
+
+https://api.instagram.com/v1/users/search?q=damned_god&access_token=220968095.60ee6b5.fa4881ace5a049799d3b1342699302d9
+
+
+https://github.com/stevenschobert/instafeed.js/blob/master/src/instafeed.coffee
+https://github.com/KamiGim/musicMaster/blob/master/src/Gallery.jsx
