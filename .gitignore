@@ -155,8 +155,3 @@ typings/
 # See https://github.com/joeblau/gitignore.io/issues/186 and https://github.com/joeblau/gitignore.io/issues/360
 
 .idea/
-
-# End of https://www.gitignore.io/api/git,node,intellij,webstorm+all
-package-lock.json
-src/.eslintrc.yml
-src/components/
