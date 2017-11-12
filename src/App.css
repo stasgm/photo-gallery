@@ -16,6 +16,11 @@
     width: 220px;
 }
 
+.buttons-select-profile{
+    display: flex;
+    justify-content: center;
+}
+
 .status{
     font-family: monospace;
     font-size: 16px;
@@ -63,9 +68,7 @@
 }
 
 .gallery-list{
-    display: inline-table;
-    justify-content: flex-start;
-    //height: 1600px;
+
 }
 
 .item{
@@ -79,10 +82,9 @@
 }
 
 .item-img {
+    float: left;
     width: 220px;
     height: 220px;
     border: 3px solid #fff;
     border-radius: 3px;
-    object-fit: cover;
-    position: absolute;
 }

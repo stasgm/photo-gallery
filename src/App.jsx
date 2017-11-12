@@ -1,11 +1,13 @@
+//Libraries
 import React, { Component } from 'react';
+import fetchJsonp from 'fetch-jsonp';
+import $ from 'jquery';
+import { Form, Button, ButtonToolbar, ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
+//Components
 import Gallery from './components/Gallery';
 import Profile from './components/Profile';
+// Styles
 import './App.css';
-import $ from 'jquery';
-import fetchJsonp from 'fetch-jsonp';
-
-
 
 //const INSTAGRAM_ID = 220968095;
 //const INSTAGRAM_ID = 3567862449; //ardent_arctic
@@ -73,7 +75,6 @@ class App extends Component{
         });
     };
 
-    //&access_token=220968095.60ee6b5.fa4881ace5a049799d3b1342699302d9
 
 
     loadProfile(id){
@@ -143,30 +144,32 @@ class App extends Component{
                 <div className='App-title'>
                     My Personal gallery!
                 </div>
-                <div>
-                    <button className='Tags-button-show-message button' onClick={() => this.showMessage()}>
-                        Загрузить цитату
-                    </button>
+                <Form inline>
+                    <div>
+                        <Button className='Tags-button-show-message button' onClick={() => this.showMessage()}>
+                            Загрузить цитату
+                        </Button>
+                        <div className='status'>{this.state.status}</div>
+                    </div>
                     {/*
                     <button className='Tags-button-show-profile button' onClick={() => this.loadProfile()}>
                         Загрузить профиль
                     </button>
                     */}
-                    <button className='Tags-button-show-profile button' onClick={() => this.loadRecentMedia()}>
-                        Загрузить 5 фото
-                    </button>
-                    <button className='Tags-button-show-profile button' onClick={() => this.loadProfile(this.state.id_list[1])}>
-                        Загрузка Stas
-                    </button>
-                    <button className='Tags-button-show-profile button' onClick={() => this.loadProfile(this.state.id_list[0])}>
-                        Загрузка Alexandra
-                    </button>
-                    <select name="profile">
-                        <option value={this.state.id_list[0]}>Alexandra</option>
-                        <option value={this.state.id_list[0]}>Stas</option>
-                    </select>
+                    <ButtonToolbar className='buttons-select-profile'>
+                        <ToggleButtonGroup type="radio" defaultValue={0} name='options'>
+                            <ToggleButton className='Tags-button-show-profile button' value={0} onClick={() => this.loadProfile(this.state.id_list[0])}>
+                                Alexandra
+                            </ToggleButton>
+                            <ToggleButton className='Tags-button-show-profile button' value={1} onClick={() => this.loadProfile(this.state.id_list[1])}>
+                                Stas
+                            </ToggleButton>
+                        </ToggleButtonGroup>
+                    </ButtonToolbar>
 
-                    <div className='status'>{this.state.status}</div>
+                    <Button className='Tags-button-show-profile button' onClick={() => this.loadRecentMedia()}>
+                        Загрузить 5 фото
+                    </Button>
                     {/*
                       <input className='Tags-input' placeholder='Введите теги' />
                     */}
@@ -174,7 +177,7 @@ class App extends Component{
                         <Profile profile={this.state.profile} />
                         <Gallery images={this.state.media} count={this.state.media.length} pagination={this.state.pagination}/>
                     </div>
-                </div>
+                </Form>
             </div>
         )
     }
